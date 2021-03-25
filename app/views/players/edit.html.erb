@@ -1,0 +1,16 @@
+<h1>Throw the ball!</h1>
+
+<%= form_with model: @player do |form| %>
+<div>
+    <%= form.label :throw %><br>
+    <%= form.text_field :throw %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+  <br/>
+  <%= link_to "Home", root_path(@player) %>
+
+<% end %>

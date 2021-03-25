@@ -1,0 +1,22 @@
+<br/>
+
+<h2>name: <%= @player.name %></h2>
+
+<p>score: <%= @player.score %></p>
+
+<%if @player.strike1 or @player.strike2%>
+<p>You got a strike!!!</p> 
+<%end%>
+
+<%if @player.spare%>
+<p>You got a spare!!!</p> 
+<%end%>
+
+
+<ul>
+  <li><%= link_to "Home", root_path(@player) %></li>
+  <br/>
+  <li><%= link_to "Delete", player_path(@player),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>

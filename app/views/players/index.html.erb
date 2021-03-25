@@ -1,0 +1,40 @@
+<h1>Bowling</h1>
+<h4><%= link_to "New Player", new_player_path %></h4>
+
+<ul>
+  <% @players.each do |player| %>
+    <li>
+        player name: <a href=<%=player_path(player)%>>
+                <%= player.name %>
+        </a><br/> 
+        first try: <%= player.cell1 %>   
+        <br/> 
+        second try: <%= player.cell2 %>   
+        <br/> 
+        third try: <%= player.cell3 %>   
+        <br/> 
+        score: <%= player.score %>   
+        <br/>
+        <%if player.strike1 or player.strike2%>
+            <p>You got a strike!!!</p>
+        <%end%>
+        <%if player.spare%>
+            <p>You got a spare!!!</p> 
+        <%end%>  
+        You are at frame: <%= player.count %>, <%if player.cell1==nil%>first try<%elsif player.cell2==nil%>second try<%else%> third try<%end%>   
+        <br/>
+        
+        <%if player.gameover==true%>
+            <p>GAMEOVER!</p> 
+        <%else%>
+            <%= link_to "Throw a ball (0-#{player.remaining})", edit_player_path(player) %>
+            <h3><%=player.notice%><br/></h3>
+        <%end%>
+    </li>
+    <br/> 
+    <br/> 
+    <br/>
+  <% end %>
+</ul>
+<br/>
+

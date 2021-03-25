@@ -1,0 +1,41 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cell1: 1
+  cell2: 1
+  cell3: 1
+  count: 1
+  spare: false
+  score: 1
+  throw: 1
+  strike1: false
+  st1_score: 1
+  st1_count: 1
+  strike2: false
+  st2_score: 1
+  st2_count: 1
+  st3_score: 1
+  gameover: false
+  notice: MyText
+  remaining: 1
+
+two:
+  name: MyString
+  cell1: 1
+  cell2: 1
+  cell3: 1
+  count: 1
+  spare: false
+  score: 1
+  throw: 1
+  strike1: false
+  st1_score: 1
+  st1_count: 1
+  strike2: false
+  st2_score: 1
+  st2_count: 1
+  st3_score: 1
+  gameover: false
+  notice: MyText
+  remaining: 1

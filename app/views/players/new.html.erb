@@ -1,0 +1,12 @@
+<h1>Create player</h1>
+
+<%= form_with model: @player do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
